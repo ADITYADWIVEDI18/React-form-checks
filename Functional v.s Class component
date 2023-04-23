@@ -1,0 +1,70 @@
+CLASS COMPONENTS
+.................
+
+app.jsx
+........
+
+import React from "react";
+import ClassComponent from "./ClassComponent";
+import FunctionalComponent from "./FunctionalComponent";
+
+class App extends React.Component {
+  render() {
+    return <ClassComponent />;
+  }
+}
+
+export default App;
+
+ClassComponents.jsx
+...................
+
+import React from "react";
+
+class ClassComponent extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      count: 0
+    };
+    this.increase = this.increase.bind(this);
+  }
+
+  increase() {
+    this.setState({ count: this.state.count + 1 });
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>{this.state.count}</h1>
+        <button onClick={this.increase}>+</button>
+      </div>
+    );
+  }
+}
+
+export default ClassComponent;
+//////////////////////////////////////////////////////////////
+
+FunctionalComponents.jsx
+.........................
+
+import React, { useState } from "react";
+
+function FunctionalComponent() {
+  const [count, setCount] = useState(0);
+
+  function increase() {
+    setCount(count + 1);
+  }
+
+  return (
+    <div>
+      <h1>{count}</h1>
+      <button onClick={increase}>+</button>
+    </div>
+  );
+}
+
+export default FunctionalComponent;
