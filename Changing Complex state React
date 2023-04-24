@@ -23,7 +23,7 @@ function App() {
         const inputName = event.target.name;  */
     
 
-    setFullName(prevValue => {
+    setFullName(prevValue => { 
       if (name === "fName") {
         return {
           fName: value,
