@@ -34,6 +34,22 @@ function App() {
         };
       }
     });
+    
+    
+      Another way by spread operator
+      ..............................
+    
+   /*   
+   
+   setContact( prevValue => {  
+         return {      
+                  ...prevValue ,
+                  [name]:value
+                               };
+               });    
+    
+                                           */
+          
   }
 
   return (
