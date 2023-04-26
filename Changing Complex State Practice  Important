@@ -14,7 +14,7 @@ function App() {
     const {value, name} = event.target;
 
     setContact((prevValue) => {
-      if (name === "fName") {
+      if (name === "fName") { 
         return {
           fName: value,
           lName: prevValue.lName,
