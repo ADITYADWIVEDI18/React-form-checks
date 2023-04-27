@@ -16,7 +16,7 @@ function App() {
     setContact((prevValue) => { 
       if (name === "fName") { 
         return {
-          fName: value,
+          fName: value, 
           lName: prevValue.lName,
           email: prevValue.email
         };
