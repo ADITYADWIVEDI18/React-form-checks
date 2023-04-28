@@ -24,7 +24,7 @@ function App() {
         return {
           fName: prevValue.fName, 
           lName: value,
-          email: prevValue.email 
+          email: prevValue.email  
         };
       } else if (name === "email") {
         return {
