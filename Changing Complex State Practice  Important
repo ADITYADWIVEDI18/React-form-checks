@@ -12,7 +12,7 @@ function App() {
 
   function updateContact(event) {
     const {value, name} = event.target;
-
+ 
     setContact((prevValue) => { 
       if (name === "fName") { 
         return {
